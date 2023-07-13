@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Lora&display=swap');
+
+html, body {
+    font-family: 'Lato', sans-serif;
+}
+
+.rc-pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;    
+
+    .rc-pagination-item,
+    .rc-pagination-prev,
+    .rc-pagination-next {
+        border: solid 1px #D4D8D9;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 700;
+        font-size: 0.9rem;
+
+        &:hover {
+            background-color: #D4D8D9;
+            
+            cursor: pointer;
+        }
+    }
+
+    .rc-pagination-prev {
+        margin-right: 12px;
+
+        button {
+            width: 20px;
+            height: 20px;
+            background: url('/arrow.svg') no-repeat;
+            background-size: 20px 20px;
+        }
+    }
+
+    .rc-pagination-next {
+        margin-left: 12px;
+
+        button {
+            width: 20px;
+            height: 20px;
+            background: url('/arrow.svg') no-repeat;
+            background-size: 20px 20px;
+            transform: rotate(180deg); // rotates the entire element, hacky but works because is round
+        }
+    }
+
+    .rc-pagination-jump-next,
+    .rc-pagination-jump-prev {
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background: transparent;
+            border: none;
+            color: #666;
+            font-size: 0.6rem;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        button::after {
+            display: block;
+            content: "\2022\2022\2022";
+        }
+
+    }
+
+    .rc-pagination-item-active {
+        background-color: #E0E9CB;
+        border-color: #E0E9CB;
+        color: #025B4B;
+    }
+}

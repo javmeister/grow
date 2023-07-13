@@ -1,0 +1,17 @@
+.navigation {
+    height: 64px;
+    border-bottom: solid 2px #025B4B1a;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        background: url('/grow-logo.svg') no-repeat;
+        background-size: 32px 32px;
+        background-position: 50% 50%;
+    }
+}

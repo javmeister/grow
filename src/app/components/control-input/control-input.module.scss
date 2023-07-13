@@ -1,0 +1,35 @@
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ECF1E0;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .calendar,
+    .results,
+    .country {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calendar {
+        
+    }
+
+    .results {
+        background-color: #FAE7CC;
+    }
+
+    .country {
+        background-color: #DEE8F6;
+    }
+}

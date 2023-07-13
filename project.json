@@ -1,0 +1,78 @@
+{
+  "name": "grow",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/grow"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "grow:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "grow:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "grow:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "grow:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "grow:build:development"
+        },
+        "production": {
+          "buildTarget": "grow:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/grow"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "coverage/grow"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "grow:build"
+      }
+    }
+  },
+  "tags": []
+}

@@ -38,6 +38,9 @@ export default defineConfig({
       dir: './node_modules/.vitest',
     },
     environment: 'jsdom',
+    coverage: {
+      enabled: true
+    },
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
 });

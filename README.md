@@ -53,11 +53,13 @@ Open your browser and navigate to http://localhost:4200/.
 
 ## Testing
 
-To run unit tests run this tasks:
+To run unit tests use this tasks:
 
 ```
 nx test
 ```
+
+![unit tests](https://github.com/javmeister/grow/assets/5751787/8b4f0070-2d47-466b-8ea0-b26e95638ac5)
 
 You can also run the e2e integration test on headless Cypress with:
 

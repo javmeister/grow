@@ -30,7 +30,13 @@ I picked allowing the users to search by country, using the separate API endpoin
 
 ## Start the app
 
-To start the development server run:
+Before you run the app, you need to install the dependencies with:
+
+```
+yarn
+```
+
+Then, to start the development server run:
 
 ```
 nx serve grow
@@ -56,14 +62,18 @@ nx test
 You can also run the e2e integration test on headless Cypress with:
 
 ```
-nx e2e e2e
+nx e2e
 ```
+
+![e2e headless](https://github.com/javmeister/grow/assets/5751787/b9ad254c-b062-4ca6-86ba-72f4535f3c46 "A screenshot of the e2e tests running on headless Cypress")
 
 Or if you want to keep the cypress app open and monitor the tests while running:
 
 ```
-nx e2e e2e --watch
+nx e2e --watch
 ```
+
+![e2e electron](https://github.com/javmeister/grow/assets/5751787/585813e9-0d75-4f7c-a004-2c42819c4e33)
 
 And to run the linter:
 
